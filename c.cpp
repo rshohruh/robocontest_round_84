@@ -15,6 +15,8 @@ int main(){
 	sort(a.begin(), a.end()); 
     sort(b.begin(), b.end());
 	for(int i = 0; i < n; ++i){
-		cout << (upper_bound(a.begin(), a.end(), c[i].second) - a.begin()) - (lower_bound(b.begin(), b.end(), c[i].first) - b.begin())-1 << endl;
+		int x = upper_bound(a.begin(), a.end(), c[i].second) - a.begin();
+		int y = lower_bound(b.begin(), b.end(), c[i].first) - b.begin();
+		cout << x - y - 1 << endl;
 	}
 }
